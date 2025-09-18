@@ -1,0 +1,132 @@
+/* Hero header */
+.upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:20px;
+  padding-top: 20px;
+  position: relative;
+   height: auto;
+}
+
+
+/* Logo */
+.RegiaoLogo img {
+  height: 150px; 
+  object-fit: cover;
+}
+
+.RegiaoNav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color:  #5c5c5c4d; 
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #ffffff91, 0 0 10px #44101033; 
+  border: 1px solid #2a2e04ff;
+  transition: all 0.3s ease;
+}
+
+/* Lista horizontal */
+.RegiaoNav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 60px; 
+}
+
+/* Links */
+.RegiaoNav a {
+  text-decoration: none;
+  color: #000000ff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  letter-spacing: 1px;
+  
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.RegiaoNav a:hover {
+  color: #ffffffff;
+  text-shadow: 0 0 5px #0011ffff, 0 0 10px #ffffffff; 
+}
+
+/* linha neon embaixo do link ao passar o mouse */
+.RegiaoNav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #1714a8ff;
+  width: 0;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.RegiaoNav a:hover::after {
+  width: 100%;
+}
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: black;
+    background-image: url('./IMGS/1370616.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+button{
+   display: inline-block;
+    margin: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  border-radius: 2px;
+  background: transparent;
+  border: 2px solid black;
+
+ 
+  clip-path: polygon(
+    0 0, 90% 0, 100% 25%, 
+    100% 100%, 10% 100%, 0 75%
+  );
+
+  transition: all 0.3s ease;
+
+}
+button:hover {
+  background: black;
+  transform: scale(1.05); 
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: white;
+    
+}
+
+.heroSectionMidAndCenter{
+    padding: 20px;
+    margin-top: 150px;
+    font-size: 50px;
+}
