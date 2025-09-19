@@ -1,12 +1,36 @@
 const login = document.getElementById("login")
 
-login.addEventListener ("click" (()=>{
+login.addEventListener("click", (()=>{
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || []
 
-    const usuario = document.getElementById("usuario")
-    const password = document.getElementById("password")
+    const usuario = document.getElementById("usuario").value;
+    const password = document.getElementById("password").value;
 
-    for(let i = 0;i < usuarios.length; i++){
-        
+    if(usuario === "" || password === ""){
+        window.alert("Porfavor preencha todos os campos")
+        return;
     }
+
+    let encontrarUsuario = null;
+    for(let i = 0;i < usuarios.length; i++){
+        if(usuarios[i].usuario === usuario){
+            encontrarUsuario = usuarios[i];
+            break;
+        }
+    }
+
+    if(encontrarUsuario === null){
+        window.alert("Usuario não encontrado")
+        return;
+    }
+
+    if(encontrarUsuario.password !== password){
+        window.alert("Senha invalida")
+        return;
+    }
+
+    alert("Cadastro feito com sucesso")
+
+
+    
 }))

@@ -3,7 +3,7 @@ const confirmar = document.getElementById("confirmar")
 
 
 confirmar.addEventListener("click", (()=> {
-    const password = document.getElementById("password").value
+    const password = document.getElementById("Password").value
     const password2 = document.getElementById("confirmPassword").value
     const email = document.getElementById("Email").value
     const usuario = document.getElementById("Usuario").value
@@ -24,7 +24,6 @@ confirmar.addEventListener("click", (()=> {
             password: password
         }
         
-        novoUsuario.password.TextEncoder().encode(password)
 
         usuarios.push(novoUsuario)
         localStorage.setItem("usuarios", JSON.stringify(usuarios))
