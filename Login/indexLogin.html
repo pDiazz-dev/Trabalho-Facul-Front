@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleLogin.css">
     <title>Document</title>
 </head>
 <body>
 
-    <form action="loginForm">
-        <label for="Usuario" > Usuario</label>
-        <input type="text" placeholder="Digite seu Usuario" id="usuario">
+    <section class="container">
+        <div class="cardLogin">
+            <h1>Quer entrar em night city?</h1>
+            <form action="loginForm" class="loginForm">
+                <label for="Usuario" > Usuario</label>
+                <input type="text" placeholder="Digite seu Usuario" id="usuario">
+                <label for="senha" >senha</label>
+                <input type="password" placeholder="Digite sua senha" id="password">
+                <input type="button" value="Login" id="login" class="button-49">
 
-        <label for="senha" >senha</label>
-        <input type="password" placeholder="Digite sua senha" id="password">
+            </p>
+            </form>
+            
+        </div>
+        <div class="cardregister">
 
-        <input type="button" value="Login" id="login">
-    </form>
-
-    
-
-    <p>Não tem cadastro?
-         <a href="/Login/Cadastro/indexCadastro.html">Clique aqui</a>
-    </p>
+        </div>
+    </section>
     
 </body>
 <script src="/Login/scriptLogin.js"></script>
