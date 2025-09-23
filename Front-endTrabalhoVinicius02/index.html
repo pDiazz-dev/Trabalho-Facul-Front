@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Index.css">
-  <title>Document</title>
+  <title>Night City</title>
 </head>
 <body>
   <!-- HERO SECTION -->
@@ -25,40 +25,119 @@
       </div>
     </header>
 
-   <section class="heroSectionMidAndCenter">
-  <div>
-    <h1>Seja bem-vindo a Night City!</h1>
-    <div class="buttons">
-      <button><a href="https://youtu.be/Ugb80d5lxEM">ASSISTA AO TRAILER</a></button>
-      <button><a href="https://www.cyberpunk.net/us/pt-br/buy">COMPRE AGORA MESMO</a></button>
-    </div>
-    <div class="nightCitySobre">
-        <h2>Night City é a personificação do lema “alta tecnologia, baixa qualidade de vida”. Sob o brilho dos letreiros de neon e da cibernética avançada, a cidade esconde desigualdade, violência e o domínio das megacorporações. Governos não têm poder real, e sobrevivem mercenários, hackers e gangues à margem do sistema. Os implantes prometem progresso, mas custam caro em dinheiro e humanidade. Mesmo assim, a contracultura resiste, transformando música e rebelião em voz contra o controle corporativo.</h2>
-    </div>
-  </div>
-</section>
-
+    <section class="heroSectionMidAndCenter">
+      <div>
+        <h1>Seja bem-vindo a Night City!</h1>
+        <div class="buttons">
+          <button><a href="https://youtu.be/Ugb80d5lxEM">ASSISTA AO TRAILER</a></button>
+          <button><a href="https://www.cyberpunk.net/us/pt-br/buy">COMPRE AGORA MESMO</a></button>
+        </div>
+        <div class="nightCitySobre">
+          <h2>
+            Night City é a personificação do lema “alta tecnologia, baixa qualidade de vida”. Sob o brilho dos letreiros de neon e da cibernética avançada, a cidade esconde desigualdade, violência e o domínio das megacorporações. Governos não têm poder real, e sobrevivem mercenários, hackers e gangues à margem do sistema. Os implantes prometem progresso, mas custam caro em dinheiro e humanidade. Mesmo assim, a contracultura resiste, transformando música e rebelião em voz contra o controle corporativo.
+          </h2>
+        </div>
+      </div>
+    </section>
   </section>
 
   <!-- MAIN SECTION -->
   <section class="heroSectionMain">
     <main class="heroMain">
-        <div class="JhonnyCard">
-           <article class="card-horizontal">
-            <img src="./IMGS/1109849.jpg" alt="Johnny Silverhand" class="card-img">
-            <div class="card-body">
-            <h3>JHONNY SILVERHAND</h3>
-            <p>
-      Johnny Silverhand é um ex-músico de rock e líder da banda Samurai, interpretado por Keanu Reeves.
-      Guerreiro cibernético com braço biônico, é uma figura carismática e controversa que luta contra
-      o domínio das megacorporações em Night City — um símbolo de resistência.
-            </p>
-            </div>
-            </article>
-            </div>
-
       
+      <!-- CONTAINER FLEX: CARDS + PLAYER -->
+      <div class="main-content">
+        <!-- CARDS -->
+        <div class="cards-container">
+          <div class="JhonnyCard">
+            <article class="card-horizontal">
+              <img src="./IMGS/1117861.jpg" alt="Johnny Silverhand" class="card-img">
+              <div class="card-body">
+                <h3>JHONNY SILVERHAND</h3>
+                <p>
+                  Johnny Silverhand é um ex-músico de rock e líder da banda Samurai, interpretado por Keanu Reeves.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="KerryCard">
+            <article class="card-horizontal">
+              <img src="./IMGS/Cyberpunk 2077 Kerry Eurodyne.webp" alt="Kerry" class="card-img">
+              <div class="card-body">
+                <h3>Kerry Eurodyne</h3>
+                <p>
+                  Kerry Eurodyne é um lendário guitarrista e compositor, também integrante da icônica banda Samurai.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="BesCard">
+            <article class="card-horizontal">
+              <img src="./IMGS/Bes_Isis_HoNC_CP2077.webp" alt="Bes Isis" class="card-img">
+              <div class="card-body">
+                <h3>Nancy</h3>
+                <p>
+                  Bes Isis é a voz indomável da Samurai, uma presença magnética que incendiava os palcos de Night City.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="HenryCard">
+            <article class="card-horizontal">
+              <img src="./IMGS/cyberpunk_2077_illustration_2020_4k_hd_games.jpg" alt="Henry" class="card-img">
+              <div class="card-body">
+                <h3>Henry: O guitarrista</h3>
+                <p>
+                  Henry é um guitarrista talentoso e membro da cena musical de Night City.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- PLAYER -->
+        <div class="music">
+          <div class="audio-player">
+            <div class="song-info">
+              <h2>Chippin’ In</h2>
+              <p>SAMURAI</p>
+            </div>
+          
+            <div class="cover-container">
+              <img src="./IMGS/1024658 (1).jpg" alt="Capa da música" class="cover">
+            </div>
+          
+            <div class="controls">
+              <button id="prev">&#9664;</button>
+              <button id="play">&#9654;</button>
+              <button id="next">&#9654;&#9654;</button>
+            </div>
+          
+            <div class="progress-container">
+              <span id="current-time">00:00</span>
+              <input type="range" id="progress" value="0" min="0" max="100">
+              <span id="duration">03:09</span>
+            </div>
+          
+            <div class="volume-container">
+              <span>🔊</span>
+              <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+            </div>
+          
+            <audio id="audio" src="./Audios/Cyberpunk 2077 — Chippin’ In by SAMURAI (Refused) - Cyberpunk 2077.mp3"></audio>
+          </div>
+        </div>
+      </div>
+
+      <p class="BySamurai">A Samurai foi uma banda de rock formada nos anos 2000 por Johnny Silverhand e Kerry Eurodyne. Rapidamente alcançou fama mundial com a gravadora Universal, lançando seis álbuns e lotando estádios. Em 2007, após a prisão de Nancy (Bes Isis), a banda se desfez em 2008 e cada membro seguiu seu caminho. Nos anos 2020, surgiram rumores de reunião, mas Johnny desapareceu no Holocausto da Cidade Noturna de 2023. Décadas depois, sua música virou lenda, ainda tocada em rádios de Night City e lembrada como símbolo de rebeldia contra as corporações.</p>
+      <iframe class="NeverFadeAway" width="560" height="315" src="https://www.youtube.com/embed/kynpUyvVp-8?si=2nhLGoCyq7YHbvnL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </main>
   </section>
+
+  <script src="Animacoes.js"></script>
+  <script src="player.js"></script>
 </body>
 </html>
