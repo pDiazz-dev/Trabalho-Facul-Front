@@ -1,14 +1,17 @@
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Bebas Neue', sans-serif;;
 
 }
 
 body{
     height: 100vh;
-    background-image: url(imgLogin/1360193.jpeg);
+    background-image: url(imgLogin/1095243.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -22,27 +25,37 @@ body{
 /* CONTAINER PRINCINPAL */
 
 .container{
-    background-image: url(imgLogin/thumb-1920-1113858.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+   
     border: solid;
     border-color: yellow;
     border-radius: 20px;
     width: 850px;
     height: 550px;
     position: relative;
+    display: flex;
+}
+
+/* FUNDO DO CONTAINER PRINCIPAL */
+
+.fundoLogin{
+   background-image: url(imgLogin/1020913.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 440px;
+    height: 100%;
+    border-radius: 15px;
 }
 
 /* CENTRALIZAÇÃO DO LOGIN DIREITO */
 .cardLogin{
     display: block;
     position: absolute;
-    left: 443px;
+    left: 405px;
     align-items: end;
     padding-right: 40px;
-    background-color: rgb(20, 20, 20);
-    width: 400px;
+    background-color: rgb(19, 19, 19);
+    width: 435x;
     height: 543px;
     border-radius: 20px;
 }
@@ -53,9 +66,38 @@ body{
     flex-direction: column;
     font-size: 25px;
     color: #00fff7;
-    padding-top: 100px;
+    padding-top: 10px;
     padding-left: 50px;
 }
+
+/* TITULO DO CARD */
+.tituloLogin h1 {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    color: #fe0;
+    text-shadow: 
+        0 0 3px #ffee00,
+        0 0 1px #ffee00;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+.tituloLogin p {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 16pt;
+    text-align: center;
+    font-style: italic;
+    color: #bcb3c2;
+    text-shadow: 
+        0 0 3px #ff0022,
+        0 0 6px #ff0022;
+    margin-top: 8px;
+    padding-left: 55px;
+    text-transform: uppercase;
+}
+
 /* FORMULARIO PARA PREENCHER*/
 #usuario, #password {
     padding: 15px;
@@ -79,12 +121,14 @@ body{
 
 #usuario:focus,
 #password:focus {
-    border-color: #00fff7;
-    box-shadow: 0 0 20px #00fff7cc;
+    border-color: #ff0022;
+    box-shadow: 0 0 20px #ff0022;
     background: rgba(10, 10, 10, 0.9);
 }
 
-label {
+/* LABEL DO FORMULARIO */
+
+.usuario, .senha {
     display: block;
     font-family: 'Share Tech Mono', monospace;
     font-size: 20px;
@@ -96,11 +140,13 @@ label {
     font-size: 40px;
 }
 
-label:hover {
-    color: #00fff7;
-    text-shadow: 0 0 8px #00fff7, 0 0 16px #00fff7;
+.usuario:hover, .senha:hover {
+    color: #ff0022;
+    text-shadow: 0 0 8px #ff0022, 0 0 16px #ff0022;
     cursor: pointer;
 }
+
+
 
 
 /* BOTÃO DE LOGIN*/
@@ -108,19 +154,75 @@ label:hover {
     width: 250px;
     height: 65px;
     border-radius: 12px;
-    background-color: rgb(245, 245, 107);
+    background-color: #fe0;
     cursor: pointer;
     font-size: 22px;
     font-weight: bold;
     color: black;
     border: none;
     transition: 0.3s ease;
-    margin: 30px;
+    margin: 15px;
+    clip-path: polygon(0 10%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
 }
 
 #login:hover {
-    background-color: #e0e05c;
+    background-color: #ff0022;
     transform: scale(1.05);
     border-color: #000000;
     box-shadow: 0 0 15px #000000cc; 
+    clip-path: polygon(5% 5%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
+}
+#login:active {
+  transform: scale(0.95);   
+  background-color: #f5f56b;
+  color: black;
+}
+
+/*SUBTITULO ABAIXO DO BOTÃO DE LOGIN*/
+.subTitulo {
+    margin-top: 10px;
+    font-size: 1em;
+    text-align: center;
+    color: #ffffff42;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 
+        0 0 5px #ffffff86;
+    display: block;
+    left: 29px;
+    position: relative;
+
+}
+
+/* BOTÃO DE REGISTRAR DA ESQUERDA*/
+
+#register{
+    width: 250px;
+    height: 65px;
+    border-radius: 12px;
+    background-color: #fe0;
+;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    border: none;
+    transition: 0.3s ease;
+    position: absolute;
+    left: 80px;
+    top: 429px;
+    clip-path: polygon(0 10%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
+}
+
+#register:hover {
+    background-color: #ff0022;
+    transform: scale(1.05);
+    border-color: #000000;
+    box-shadow: 0 0 15px #000000cc; 
+    clip-path: polygon(5% 5%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
+}
+#register:active {
+  transform: scale(0.95);   
+  background-color: #f5f56b;
+  color: black;
 }
