@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleCadastro.css">
     <title>Criação de usuario</title>
 </head>
 <body>
     <a href="/Login/indexLogin.html">Voltar</a>
 
-    <form action="cadastroForm">
-        <label for="Usuario">Nome do Usuario</label>
-    <input type="text" placeholder="Digite seu Usuario" id="UsuarioRegister">
-
-    <label for="Email">Email</label>
-    <input type="email" placeholder="Digite seu Email" id="EmailRegister">
-
-    <label for="senha">senha</label>
-    <input type="password" placeholder="Digite sua senha" id="PasswordRegister">
-
-    <label for="senha">Confirme a sua senha</label>
-    <input type="password" placeholder="Digite sua senha" id="confirmPassword">
-
-    <input type="button" value="Confirma" id="confirmar">
-
-    </form>
+    <section class="containerCadastro">
+        <div class="cardCadastro">
+            <form action="cadastroForm" class="cadastroForm">
+                <label for="Usuario">Nome do Usuario</label>
+            <input type="text" placeholder="Digite seu Usuario" id="Usuario">
+            <label for="Email">Email</label>
+            <input type="email" placeholder="Digite seu Email" id="Email">
+            <label for="senha">senha</label>
+            <input type="password" placeholder="Digite sua senha" id="Password">
+            <label for="senha">Confirme a sua senha</label>
+            <input type="password" placeholder="Digite sua senha" id="confirmPassword">
+            <input type="button" value="Confirma" id="confirmar">
+            </form>
+        </div>
+    </section>
     
     
 </body>
