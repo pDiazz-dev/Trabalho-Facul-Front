@@ -1,0 +1,369 @@
+/* ================= HERO HEADER ================= */
+.upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Logo */
+.RegiaoLogo img {
+  height: 150px; 
+  object-fit: cover;
+}
+
+/* Nav com efeito glass */
+.RegiaoNav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #5c5c5c4d; 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #ffffff91, 0 0 10px #44101033; 
+  border: 1px solid #2a2e04ff;
+  transition: all 0.3s ease;
+}
+
+/* Lista horizontal */
+.RegiaoNav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 60px; 
+}
+
+/* Links */
+.RegiaoNav a {
+  text-decoration: none;
+  color: #000000ff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.RegiaoNav a:hover {
+  color: #ffffffff;
+  text-shadow: 0 0 5px #0011ffff, 0 0 10px #ffffffff; 
+}
+
+.RegiaoNav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #1714a8ff;
+  width: 0;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.RegiaoNav a:hover::after {
+  width: 100%;
+}
+
+/* ================= BASE ================= */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bebas Neue', sans-serif;
+  background-color: #04060fff;
+  color: white;
+}
+
+/* ================= BOTÕES ================= */
+button {
+  display: inline-block;
+  margin: 0px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 44px;
+  font-weight: bold;
+  color: black;
+  background: transparent;
+  border: 4px solid black;
+  clip-path: polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: black;
+  color: white;
+  transform: scale(1.05); 
+  clip-path: polygon(5% 5%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
+}
+
+button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button a:hover {
+  color: white;
+}
+
+.nightCitySobre details{
+  background: #0f0f10;
+  padding: 20px;
+  clip-path: polygon(0 10%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
+  border: 1px solid rgba(17, 0, 255, 0.9);
+  color: #ddd;
+}
+details h2{
+  font-size: 20px;
+  text-align: justify;
+  padding-left: 10px;
+}
+
+/* ================= HERO SECTION ================= */
+.heroSectionUpper {
+  background-image: url('./IMGS/1370616.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  color: black;
+}
+
+.heroSectionMidAndCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 43px;
+  margin-left: 80px; 
+  margin-bottom: 100px;
+}
+
+.buttons {
+  margin-bottom: 90px;
+}
+
+.nightCitySobre{
+  margin-left: 10px;
+  font-size: 20px;
+  max-width: 600px;
+  text-align: justify;
+}
+
+/* ================= SEGUNDA SEÇÃO ================= */
+.heroSectionMain {
+  background: url("./IMGS/thumb-1920-1340356.jpeg") center/cover no-repeat;
+  position: relative;
+  padding: 60px 20px;
+  z-index: 1;
+}
+
+.heroSectionMain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 0, 15, 0.75);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+/* ================= HERO MAIN ================= */
+.heroMain {
+  display: flex; /* cards e player lado a lado */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  flex: 1; /* ocupa todo o espaço disponível */
+}
+
+/* ================= CARDS ================= */
+.card-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #0f0f10;
+  padding: 20px;
+  clip-path: polygon(0 10%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
+  border: 1px solid rgba(17, 0, 255, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px) scale(0.99);
+  transition: opacity 600ms cubic-bezier(.2,.9,.2,1), transform 600ms cubic-bezier(.2,.9,.2,1), box-shadow 300ms;
+  transition: 0.3s ease;
+}
+
+.card-horizontal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.card-img {
+  width: 240px;
+  min-width: 180px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+  clip-path: polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
+  flex-shrink: 0;
+  background: #1d1d1dff;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-body h3 {
+  font-size: 24px;
+  color: #2600ffff;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.6px;
+}
+
+.card-body p {
+  font-size: 16px;
+  line-height: 1.45;
+  margin: 0;
+  color: #ddd;
+}
+
+.card-horizontal:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.7);
+  transition: transform 350ms ease, box-shadow 220ms ease;
+  clip-path: polygon(5% 5%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
+}
+
+/* ================= PLAYER ================= */
+.music {
+   position: absolute;
+  top: 15px;      
+  right: -140px;    
+  width: 300px;
+}
+
+.audio-player {
+  background-color: #2f3b3346;
+  padding: 20px;
+  border-radius: 20px;
+  width: 750px;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #dfffe0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  border: 2px solid #2e17ffff;
+}
+
+.song-info h2 {
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.song-info p {
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+.cover-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #dfffe0;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+}
+
+.controls button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #dfffe0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.controls button:hover {
+  transform: scale(1.2);
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+#progress {
+  flex: 1;
+  cursor: pointer;
+}
+
+.volume-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+#volume {
+  flex: 1;
+  cursor: pointer;
+}
+
+.BySamurai{
+  position: absolute;
+  top: 410px;
+  width: 800px;      
+  right: -650px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+  font-size: 18pt;
+}
+
+.NeverFadeAway{
+  position: absolute;
+  top: 680px;
+  width: 800px;      
+  right: -680px;
+  margin-top: 20px;
+  border: 4px solid #2e17ffff;
+  border-radius: 8px;
+}
+
+#audio-progress {
+  width: 100%;
+}
