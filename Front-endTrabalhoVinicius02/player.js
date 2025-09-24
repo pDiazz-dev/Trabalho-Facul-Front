@@ -1,6 +1,7 @@
+
 const audio = document.getElementById('audio');
 const playBtn = document.getElementById('play');
-const progress = document.getElementById('progress');
+const progress = document.getElementById('audio-progress');
 const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
 const volumeSlider = document.getElementById('volume');
@@ -20,8 +21,9 @@ playBtn.addEventListener('click', () => {
 audio.addEventListener('timeupdate', () => {
   const current = audio.currentTime;
   const duration = audio.duration;
-  const percent = (current / duration) * 100;
-  progress.value = percent;
+  if(duration){
+    progress.value = (current / duration) * 100;
+  }
 
   const curMin = Math.floor(current / 60);
   const curSec = Math.floor(current % 60);
@@ -32,13 +34,7 @@ audio.addEventListener('timeupdate', () => {
   durationEl.textContent = `${durMin.toString().padStart(2,'0')}:${durSec.toString().padStart(2,'0')}`;
 });
 
-// Atualizar posição quando usuário muda a barra
-progress.addEventListener('input', () => {
-  const duration = audio.duration;
-  audio.currentTime = (progress.value / 100) * duration;
-});
-
 // Controle de volume
 volumeSlider.addEventListener('input', () => {
-  audio.volume = volumeSlider.value; // 0 a 1
+  audio.volume = volumeSlider.value;
 });
