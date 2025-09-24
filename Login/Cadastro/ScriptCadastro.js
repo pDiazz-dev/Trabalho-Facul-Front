@@ -7,6 +7,11 @@ confirmar.addEventListener("click", (()=> {
     const password2 = document.getElementById("confirmPassword").value
     const email = document.getElementById("Email").value
     const usuario = document.getElementById("Usuario").value
+
+    if(usuario === "" || email === "" || password === "" || password2 === ""){
+        window.alert("Porfavor preencha todos os campos")
+        return;
+    }
     if(password === password2){
         
         //Pega o localStorage que já existe ou cria um novo vazio se não tiver
