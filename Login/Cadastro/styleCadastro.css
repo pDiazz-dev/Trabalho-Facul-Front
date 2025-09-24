@@ -8,7 +8,7 @@
 }
 body{
     height: 100vh;
-    background-image: url(imgLogin/1095243.jpg);
+    background-image: url(/Login/imgLogin/1341767.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -21,7 +21,6 @@ body{
 
 /* CONTAINER PRINCINPAL */
 .containerCadastro{
-   
     border: solid;
     border-color: yellow;
     border-radius: 20px;
@@ -31,15 +30,58 @@ body{
     display: flex;
 }
 
+/* IMAGEM LATERAL DO CADASTRO */
+.imagemLateral{
+    background-image: url(/Login/imgLogin/thumb-1920-1113858.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    left: 398px;
+    display: block;
+    width: 510px;
+    height: 100%;
+    border-radius: 15px;
+}
+
+/* BOTÃO DE VOLTAR */
+.btnVoltar{
+     width: 250px;
+    height: 65px;
+    border-radius: 12px;
+    background-color: #fe0;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    border: none;
+    transition: 0.3s ease;
+    position: absolute;
+    left: 80px;
+    top: 435px;
+    clip-path: polygon(0 10%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
+}
+
+.btnVoltar:hover {
+    background-color: #ff0022;
+    transform: scale(1.05);
+    border-color: #000000;
+    box-shadow: 0 0 15px #000000cc; 
+    clip-path: polygon(5% 5%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
+}
+.btnVoltar:active {
+   transform: scale(0.95);   
+  background-color: #f5f56b;
+  color: black;
+}
 /* CARD DO CADASTRO, DENTRO DO CONTAINER */
 .cardCadastro{
     display: block;
-    position: absolute;
-    left: 405px;
+    position: relative;
+    right: 446px;
     align-items: end;
-    padding-right: 40px;
     background-color: rgb(19, 19, 19);
-    width: 435x;
+    width: 445x;
     height: 543px;
     border-radius: 20px;
 }
@@ -51,7 +93,7 @@ body{
     font-size: 25px;
     color: #00fff7;
     padding-top: 10px;
-    padding-left: 50px;
+    width: 400px;
 }
 
 /* FORMULARIO PARA PREENCHEMENTO DO USUARIO */

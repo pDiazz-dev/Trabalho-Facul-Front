@@ -226,3 +226,60 @@ body{
   background-color: #f5f56b;
   color: black;
 }
+
+/* JANELA DE LOGIN (DIALOG)*/
+
+#dialogLogin {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    border: solid;
+    border-color: yellow;
+    border-radius: 20px;
+    width: 850px;
+    height: 556px;
+    position: relative;
+    left: 530px;
+    top: 250px;
+}
+
+#dialogLogin.show{
+    opacity: 1;
+}
+
+
+
+/* Botão para abrir o dialog */
+
+#openDialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: #fe0;
+    color: black;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    clip-path: polygon(0 10%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
+}
+
+#openDialog:hover {
+    background-color: #ff0022;
+    border-color: #000000;
+    box-shadow: 0 0 15px #000000cc; 
+    clip-path: polygon(5% 5%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
+}
+
+#openDialog:active {
+  background-color: #f5f56b;
+  color: black;
+  
+}
+
+#openDialog.hidden{
+    opacity: 0;
+    overflow: hidden;
+}

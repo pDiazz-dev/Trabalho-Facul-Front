@@ -5,33 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleLogin.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="imgLogin/1095243.jpg">
+    <link rel="preload" as="image" href="imgLogin/1020913.jpg">
     <title>Document</title>
 </head>
 <body>
 
-    <section class="container">   
-        <div class="fundoLogin">
-            <a href="Cadastro/indexCadastro.html"><button id="register"  >Registrar</button></a>
-        </div>     
-        <div class="cardLogin">
-            
-            <div class="tituloLogin">
-                <h1>Você precisa se identificar!</h1>
-                <p>Não é qualquer verme que pisa em Night City!</p>
-            </div>
-            <form action="loginForm" class="loginForm">
-                <label for="Usuario" class="usuario" > Usuario</label>
-                <input type="text" placeholder="Digite seu Usuario" id="usuario">
-                <label for="senha" class="senha">senha</label>
-                <input type="password" placeholder="Digite sua senha" id="password">
-                <input type="button" value="Login" id="login" >
-            </p>
-            
-            </form>
-            <p class="subTitulo">A cidade observa você</p>
-        </div>
-    </section>
+
+    <button id="openDialog">Clique Aqui!</button>
+        <dialog id="dialogLogin">
+            <section class="container">
+                <div class="fundoLogin">
+                    <a href="Cadastro/indexCadastro.html"><button id="register"  >Registrar</button></a>
+                </div>
+                <div class="cardLogin">
+        
+                    <div class="tituloLogin">
+                        <h1>Você precisa se identificar!</h1>
+                        <p>Não é qualquer verme que pisa em Night City!</p>
+                    </div>
+                    <form action="loginForm" class="loginForm">
+                        <label for="Usuario" class="usuario" > Usuario</label>
+                        <input type="text" placeholder="Digite seu Usuario" id="usuario">
+                        <label for="senha" class="senha">senha</label>
+                        <input type="password" placeholder="Digite sua senha" id="password">
+                        <input type="button" value="Login" id="login" >
+                    </p>
+        
+                    </form>
+                    <p class="subTitulo">A cidade observa você</p>
+                </div>
+            </section>
+        </dialog>
     
 </body>
 <script src="/Login/scriptLogin.js"></script>
+<script src="scriptAnimation.js"></script>
 </html>
