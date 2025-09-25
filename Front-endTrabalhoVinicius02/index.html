@@ -22,14 +22,10 @@
       </nav>
     </header>
 
-    <section class="heroSectionMidAndCenter">
+    <section class="heroSectionMidAndCenter"  aria-labelledby="tituloCriticas">
       <div>
         <h1 class="animate" id="boasVindas">Seja bem-vindo a Night City!</h1>
-        <div class="buttons">
-          <button class="animate"><a href="https://youtu.be/Ugb80d5lxEM">ASSISTA AO TRAILER</a></button>
-          <button class="animate"><a href="https://www.cyberpunk.net/us/pt-br/buy">COMPRE AGORA MESMO</a></button>
-        </div>
-        <div class="nightCitySobre animate">
+         <div class="nightCitySobre animate">
           <details>
             <summary><h2>Sinopse</h2></summary>
             <h3>
@@ -41,7 +37,34 @@
             </h3>
           </details>
         </div>
+        
+        <div class="buttonsAndVideo animate">
+          <p>Conheça a História de V!</p>
+          <video width="500" controls>
+  <source src="videos/Cyberpunk 2077 — Trailer de Lançamento Oficial — V.mp4" type="video/mp4">
+  <track src="videos/captions.vtt" kind="subtitles" srclang="pt" label="Português" default>
+</video>
+          <button class="animate"><a href="https://www.cyberpunk.net/us/pt-br/buy">COMPRE AGORA MESMO</a></button>
+        </div>
       </div>
+
+      <aside class="critica animate">Após um dos lançamentos mais polêmicos da história dos videogames, Cyberpunk 2077 conseguiu dar a volta por cima. Em 2020, o jogo chegou cheio de expectativas, mas também de bugs e falhas técnicas que geraram fortes críticas da comunidade. Muitos jogadores relataram problemas de desempenho, principalmente nos consoles da geração passada.
+
+Com o tempo, a CD Projekt Red lançou diversas atualizações e expansões — incluindo Phantom Liberty — que transformaram a experiência. Hoje, Cyberpunk 2077 é considerado por muitos um título “renascido”, comparado ao que aconteceu com No Man’s Sky.
+
+A evolução constante mostra como um jogo pode ser resgatado quando há dedicação da desenvolvedora. Atualmente, a comunidade reconhece o mundo vibrante de Night City como um dos mais imersivos da história dos RPGs.
+</aside>
+<article class="curiosidade animate"> Night City, a metrópole futurista onde o jogo se passa, foi criada originalmente nos anos 1980 pelo escritor Mike Pondsmith para o RPG de mesa Cyberpunk 2020. Ou seja, o jogo da CD Projekt Red é, na verdade, uma adaptação de um universo que já existia décadas antes.
+  <p>
+    Após muitos patches e a expansão <em>Phantom Liberty</em>, o jogo recebeu
+    avaliações positivas. Hoje, é considerado um título transformado.
+  </p>
+  <p>
+    Nota da comunidade: 
+    <meter value="8.5" min="0" max="10" low="5" high="9" optimum="10">8.5 de 10</meter>
+  </p>
+</article>
+      <textarea class="texto animate" placeholder="Feedback..."  id=""></textarea>
     </section>
   </section>
 
@@ -124,27 +147,35 @@
           Décadas depois, sua música virou lenda, ainda tocada em rádios de Night City e lembrada como símbolo de rebeldia contra as corporações.
         </p>
 
-        <figure class="NeverFadeAway animate">
-          <embed
-            src="https://www.youtube.com/embed/kynpUyvVp-8"
-            width="800"
-            height="315"
-            type="text/html"
-            allowfullscreen
-            title="Trailer da Samurai">
-          </embed>
-          <figcaption>
-            SAMURAI/Refused (Legendado) - Cyberpunk 2077【GMV】 <br>
-            <track src="./Legendas/Samurai_PT-BR.vtt" kind="subtitles" srclang="pt" label="Português" default>
-            <time datetime="2020-06-19">Lançamento: Seis meses atrás</time> |
-            <time datetime="PT03M09S">Duração: 5:00</time>
-          </figcaption>
-        </figure>
+       <figure class="NeverFadeAway animate">
+  <object 
+    data="https://www.youtube.com/embed/kynpUyvVp-8" 
+    type="text/html" 
+    width="800" 
+    height="315" 
+    title="SAMURAI/Refused (Legendado) - Cyberpunk 2077【GMV】"
+  >
+    <p>Seu navegador não suporta exibir este vídeo. 
+       <a href="https://www.youtube.com/watch?v=kynpUyvVp-8" target="_blank">Assista no YouTube</a>.
+    </p>
+  </object>
+  <figcaption>
+    SAMURAI/Refused (Legendado) - Cyberpunk 2077【GMV】 <br>
+    <track kind="subtitles" label="Português" srclang="pt-br" default>
+    <time datetime="2020-06-19">Lançamento: Seis meses atrás</time> |
+    <time datetime="PT03M09S">Duração: 5:00</time>
+  </figcaption>
+</figure>
 
       </div>
     </main>
-  </section>
 
+    
+  </section>
+  <footer class="footer">
+    <p>Feito por Matheus Guilherme - 2025-09-25</p>
+    <p>Feito por Pedro Dias - 2025-09-25</p>
+  </footer>
   <script src="Animacoes.js"></script>
   <script src="player.js"></script>
   <script src="verificacaoUsuario.js"></script>
