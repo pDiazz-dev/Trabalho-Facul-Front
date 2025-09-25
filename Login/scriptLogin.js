@@ -29,7 +29,9 @@ login.addEventListener("click", (()=>{
         return;
     }
 
-    alert("Cadastro feito com sucesso")
+    sessionStorage.setItem("usuarioLogado", JSON.stringify(encontrarUsuario))
+    window.location.href = "../Front-endTrabalhoVinicius02/index.html"
+
 
 
     

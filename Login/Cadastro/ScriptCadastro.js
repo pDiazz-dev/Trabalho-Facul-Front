@@ -2,6 +2,11 @@ const confirmar = document.getElementById("confirmar")
 
 
 
+function validarEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(String(email).toLowerCase());
+}
+
 confirmar.addEventListener("click", (()=> {
     const password = document.getElementById("Password").value
     const password2 = document.getElementById("confirmPassword").value
@@ -10,6 +15,10 @@ confirmar.addEventListener("click", (()=> {
 
     if(usuario === "" || email === "" || password === "" || password2 === ""){
         window.alert("Porfavor preencha todos os campos")
+        return;
+    }
+    if(!validarEmail(email)){
+        window.alert("Por favor, insira um email válido.");
         return;
     }
     if(password === password2){
@@ -34,6 +43,7 @@ confirmar.addEventListener("click", (()=> {
         localStorage.setItem("usuarios", JSON.stringify(usuarios))
 
         window.alert("Usuario cadastrado com sucesso!")
+        window.location.href = "../indexLogin.html"
     }
     
 }))
