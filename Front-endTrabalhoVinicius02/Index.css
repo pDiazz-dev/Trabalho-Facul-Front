@@ -224,7 +224,7 @@ nightCitySobre h3{
   border: 1px solid rgba(17, 0, 255, 0.9);
   border-radius: 12px;
   opacity: 0;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .card-horizontal.visible {
