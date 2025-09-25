@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');   // entra
+        entry.target.classList.add('visible');   // aparece na tela
       } else {
         entry.target.classList.remove('visible'); // some quanando sai da tela
       }

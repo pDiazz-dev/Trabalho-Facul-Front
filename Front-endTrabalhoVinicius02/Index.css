@@ -209,10 +209,10 @@ nightCitySobre h3{
   justify-content: flex-start;
   background: #0f0f10;
   padding: 20px;
-  clip-path: polygon(0 10%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
   border: 1px solid rgba(17, 0, 255, 0.9);
   border-radius: 12px;
   opacity: 0;
+  padding-bottom: 50px;
 }
 
 .card-horizontal.visible {
@@ -227,7 +227,6 @@ nightCitySobre h3{
   object-fit: cover;
   border-radius: 10px;
   margin-right: 20px;
-  clip-path: polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
   flex-shrink: 0;
   background: #1d1d1dff;
 }
