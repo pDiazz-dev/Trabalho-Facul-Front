@@ -11,7 +11,7 @@ verificarUsuarioLogado();
 
 const boasVindas = document.getElementById("boasVindas");
 const usuarioLogado = JSON.parse(sessionStorage.getItem("usuarioLogado"));
-boasVindas.innerText = `Essa é Nigth City então aproveite, ${usuarioLogado.usuario}!`;
+boasVindas.innerText = `Essa é Nigth City, ${usuarioLogado.usuario} aproveite!`;
 
 const logOut = document.getElementById("logOut");
 logOut.addEventListener("click", () => {

@@ -1,23 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.card-horizontal');
-  // anexa índice para stagger
-  cards.forEach((c, i) => c.dataset.idx = i);
+  const animatables = document.querySelectorAll('.animate');
 
-  const observer = new IntersectionObserver((entries, obs) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const idx = Number(entry.target.dataset.idx) || 0;
-        // pequeno delay por índice para efeito em cascata
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, idx * 120);
-        obs.unobserve(entry.target);
+        entry.target.classList.add('visible');   // entra
+      } else {
+        entry.target.classList.remove('visible'); // some quanando sai da tela
       }
     });
   }, {
-    threshold: 0.18,
-  
+    threshold: 0.2 // 20% visível dispara animação
   });
 
-  cards.forEach(card => observer.observe(card));
+  animatables.forEach(el => observer.observe(el));
 });
+
+
+

@@ -78,8 +78,13 @@ body {
   font-family: 'Bebas Neue', sans-serif;
   background-color: #04060fff;
   color: white;
+
 }
 
+#boasvindas {
+  font-size: 10px;
+
+}
 /* ================= BOTÕES ================= */
 button {
   display: inline-block;
@@ -123,6 +128,12 @@ details h2{
   padding-left: 10px;
 }
 
+nightCitySobre h3{
+  font-size: 12pt;
+  text-align: justify;
+  padding-left: 10px;
+}
+
 /* ================= HERO SECTION ================= */
 .heroSectionUpper {
   background-image: url('./IMGS/1370616.jpeg');
@@ -140,7 +151,7 @@ details h2{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 43px;
+  font-size: 33px;
   margin-left: 80px; 
   margin-bottom: 100px;
 }
@@ -175,7 +186,7 @@ details h2{
 
 /* ================= HERO MAIN ================= */
 .heroMain {
-  display: flex; /* cards e player lado a lado */
+  display: flex;
   gap: 20px;
   width: 100%;
   max-width: 1200px;
@@ -201,11 +212,7 @@ details h2{
   clip-path: polygon(0 10%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
   border: 1px solid rgba(17, 0, 255, 0.9);
   border-radius: 12px;
-  overflow: hidden;
   opacity: 0;
-  transform: translateY(30px) scale(0.99);
-  transition: opacity 600ms cubic-bezier(.2,.9,.2,1), transform 600ms cubic-bezier(.2,.9,.2,1), box-shadow 300ms;
-  transition: 0.3s ease;
 }
 
 .card-horizontal.visible {
@@ -248,9 +255,6 @@ details h2{
 
 .card-horizontal:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 14px 36px rgba(0,0,0,0.7);
-  transition: transform 350ms ease, box-shadow 220ms ease;
-  clip-path: polygon(5% 5%, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 75%);
 }
 
 /* ================= PLAYER ================= */
@@ -366,4 +370,16 @@ details h2{
 
 #audio-progress {
   width: 100%;
+}
+
+/* ================= ANIMAÇÕES ================= */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
